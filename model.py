@@ -41,5 +41,5 @@ lr_conf_matrix = confusion_matrix(y_test, lr_predictions)
 print('Confusion Matrix for Logistic Regression:')
 print(lr_conf_matrix)
 
-
+joblib.dump(lr_model,"model.pkl")
 joblib.dump(label_encoder, 'label_encoder.pkl')
