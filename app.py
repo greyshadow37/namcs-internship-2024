@@ -13,10 +13,17 @@ def predict():
         return jsonify({'error': 'Failed to load model'}), 500
     
     try:
+<<<<<<< Updated upstream
         data = request.get_json(force=True)
         temperature = data['Temperature']
         precipitation = data['Precipitation']
         humidity = data['Humidity']
+=======
+        data = request.get_json()
+        temperature = data['temperature']
+        precipitation = data['precipitation']
+        humidity = data['humidity']
+>>>>>>> Stashed changes
     except KeyError as e:
         return jsonify({'error': f"Missing required field: {e}"}), 400
     except TypeError as e:

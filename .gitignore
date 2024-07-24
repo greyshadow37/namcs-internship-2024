@@ -1,1 +1,6 @@
+<<<<<<< Updated upstream
 __pycache__/
+=======
+__pycache__
+app.cpython-311.pyc
+>>>>>>> Stashed changes
