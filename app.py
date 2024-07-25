@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify
 import numpy as np
 from save import load_model  #to load your model
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app,origins="*")
 
 # Load the model and label encoder
 model, label_encoder = load_model()
@@ -13,17 +15,10 @@ def predict():
         return jsonify({'error': 'Failed to load model'}), 500
     
     try:
-<<<<<<< Updated upstream
         data = request.get_json(force=True)
         temperature = data['Temperature']
         precipitation = data['Precipitation']
         humidity = data['Humidity']
-=======
-        data = request.get_json()
-        temperature = data['temperature']
-        precipitation = data['precipitation']
-        humidity = data['humidity']
->>>>>>> Stashed changes
     except KeyError as e:
         return jsonify({'error': f"Missing required field: {e}"}), 400
     except TypeError as e:
