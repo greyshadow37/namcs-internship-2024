@@ -7,16 +7,12 @@ Original file is located at
     https://colab.research.google.com/drive/1kMXlbwHbNJPCVdNmMQ1HDWPWv9PWhGKn
 """
 
-import numpy as np
+import joblib
 import pandas as pd
 import warnings
 warnings.filterwarnings('ignore')
 
 df= pd.read_excel('preprocessed_data.xlsx')
-
-df.info()
-
-df.head()
 
 df = df.drop(columns=['Unnamed: 0', 'Date'])
 
@@ -45,3 +41,5 @@ lr_conf_matrix = confusion_matrix(y_test, lr_predictions)
 print('Confusion Matrix for Logistic Regression:')
 print(lr_conf_matrix)
 
+joblib.dump(lr_model,"model.pkl")
+joblib.dump(label_encoder, 'label_encoder.pkl')
