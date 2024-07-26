@@ -1,5 +1,10 @@
 This repository contains the code for our project which was:
 Predicting the weather from historical data
+prerequisites:
+a>node.js(download from web)
+b>install npm by adding the nodejs installation path in environment variables
+b>flask,flask_cors (use pip)
+c>vite(run npm install vite)
 to run the web app:
 1>clone the repository using: git clone (repository URL)
 2>go to the location where the repository was cloned and go to /UI/src and open the app.jsx file. simultaneously open app.py file present in the main folder

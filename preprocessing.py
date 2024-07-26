@@ -7,8 +7,8 @@ Original file is located at
     https://colab.research.google.com/drive/1D3MLxznecu-vsfIQrRj5KvvjvShs78Fx
 """
 
-from google.colab import drive,files
-uploaded=files.upload()
+#from google.colab import drive,files
+#uploaded=files.upload()
 
 import pandas as pd
 import matplotlib.pyplot as plt
