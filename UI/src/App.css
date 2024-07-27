@@ -1,28 +1,23 @@
-/* Container for the app */
 #root {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background-color: #f8f9fa; /* Light background for the whole app */
 }
 
-/* Logo styles */
 .logo {
   height: 6em;
   padding: 1.5em;
-  transition: filter 300ms ease-in-out, transform 300ms ease-in-out;
+  will-change: filter;
+  transition: filter 300ms;
 }
-
 .logo:hover {
-  filter: drop-shadow(0 0 10px rgba(100, 108, 255, 0.5)); /* Subtle glow effect */
+  filter: drop-shadow(0 0 2em #646cffaa);
 }
-
 .logo.react:hover {
-  filter: drop-shadow(0 0 10px rgba(97, 218, 251, 0.5)); /* Subtle glow effect for React logo */
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-/* Spin animation for the logo */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -32,25 +27,16 @@
   }
 }
 
-/* Animation for logos if user prefers motion */
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
 
-/* Card component styling */
 .card {
-  padding: 2rem;
-  border: 1px solid #ddd; /* Light border */
-  border-radius: 12px; /* Rounded corners */
-  background-color: #ffffff; /* White background for card */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  margin-bottom: 2rem; /* Space between cards */
+  padding: 2em;
 }
 
-/* Read-the-docs text styling */
 .read-the-docs {
-  color: #6c757d; /* Slightly lighter gray for readability */
-  font-size: 0.875rem; /* Slightly smaller text */
+  color: #888;
 }
